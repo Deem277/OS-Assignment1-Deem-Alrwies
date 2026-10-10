@@ -239,7 +239,7 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+I learned how to do multithreading in Java. In this assignment each simulated process is a Java thread. I found that Thread.start() starts a thread to execute. I also understood that Thread.join() makes the main thread wait until another thread is done. The Thread.sleep() method is used to simulate the time it takes for a process to run. The assignment helped me understand the working of threads and Round-Robin scheduling.
 
 ## Question 2: What was the most challenging part of this assignment?
 
@@ -247,7 +247,7 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+The most challenging part of this assignment was running the Java program in VS Code. At first, I clicked Run, but the expected output did not appear. I was not sure if the problem was caused by the code or the Java configuration. I tried changing the JDK version and setting up the repository again. This took more time than I expected because I needed to check different settings. It was challenging, but it helped me learn more about configuring Java projects.
 
 ## Question 3: How did you overcome the challenges you faced?
 
@@ -255,15 +255,14 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+I started by checking the project setup and reviewing the README instructions. I checked the Java version and the configuration in VS Code. I also reviewed the code to make sure I was running the correct file. After working on each feature, I ran the program to check the output. I tested the priority values, context switch counter, and waiting time summary separately. Testing the code step by step helped me find problems more easily and understand my changes.
 
 ## Question 4: How can you apply multithreading concepts in real-world applications?
 
 > 💡 **TIP:** Use real applications you know (web browser, game, mobile app, music player) and connect each one to what you built here.
 
 **Your Answer:** *(5-7 sentences)*
-
-[Write your answer here.]
+Multithreading is useful in applications that need to perform different tasks. For example, a web browser can load pages in threads, while keeping the interface responsive. Music application can play audio when user searches for another song. Operating systems use scheduling to allow different tasks to share CPU time. Round-Robin scheduling is a scheduling algorithm that assigns a fixed time quantum to each process and then switches to another process. This is similar to the simulation I have run where processes run one after another until they are done.[Write your answer here.]
 
 ### Optional: What would you like to learn more about?
 
@@ -295,7 +294,7 @@
 
 **Your Answer:** *(3-5 sentences)*
 
-[Write your answer here.]
+A process is an independent running program . A thread is an execution unit within a process . Processes have their own memory space and threads within the same process share memory. Threads are also typically faster to create and communicate with than separate processes. SchedulerSimulation.java The Process class represents a simulated process. new Thread(process) creates a real Java thread to run the process. We used threads as a way to be able to simulate CPU scheduling without having to create separate processes inside the operating system.
 
 ## Question 2: Ready Queue Behavior
 
@@ -307,7 +306,7 @@
 
 **Your Answer:** *(3-5 sentences)*
 
-[Write your answer here.]
+When a process does not finish within its time quantum, it goes back to the end of the ready queue. In my simulation, the time quantum is 5000 ms, and P2 has a burst time of 10757 ms. After the first execution, P2 has 5757 ms remaining, and after the second execution, it has 757 ms remaining. P2 is re-queued 2 times before it finishes on its third turn. This makes Round-Robin fair because other processes also get a chance to use the CPU.
 
 Example from my output:
 ```
@@ -325,15 +324,15 @@ Example from my output:
 
 **Your Answer:** *(3-5 sentences overall; one short explanation per state)*
 
-1. **New**: [When is P1 in the New state?]
+1. **New**: P1 starts in the New state when a thread is created using new Thread(process) inside addProcessToQueue().
 
-2. **Runnable**: [When does P1 become Runnable?]
+2. **Runnable**: P1 enters the Runnable state when currentThread.start() is called, and it becomes ready to run.
 
-3. **Running**: [When is P1 Running?]
+3. **Running**:  P1 starts running when the CPU executes its run() method. It runs for a maximum of 5000 ms in one turn.
 
-4. **Waiting**: [When and why would a thread be Waiting?]
+4. **Waiting**: When Thread.sleep(stepTime) is called, P1 enters the Timed Waiting state for a short time. The main thread also waits for P1 to finish using currentThread.join().
 
-5. **Terminated**: [When is P1 Terminated?]
+5. **Terminated**:  P1 enters the Terminated state when its run() method finishes. If P1 still has remaining time, the program creates a new thread for its next turn.
 
 ## Question 4: Real-World Applications
 
@@ -346,29 +345,29 @@ Example from my output:
 ### Example 1 (operating-system level): [Name of scenario]
 
 **Description**:
-[Describe the real-world scenario.]
+An operating system needs to manage multiple running programs that share the CPU. For example, a user may open a browser, a text editor, and a music player at the same time. Each program needs CPU time to perform its tasks.
 
 **Why Round-Robin works well here**:
-[Fairness, responsiveness, predictability?]
+Round-Robin gives each runnable task a fixed time quantum before moving to the next task. A context switch allows the CPU to work on another task. This helps provide fairness and responsiveness, similar to how processes take turns in my simulation.
 
 ### Example 2: [Name of application/scenario]
 
 **Description**:
-[Describe the real-world scenario or application.]
+A server may receive requests from many users at the same time. It can use multiple threads to handle different requests. Some requests may need more processing time than others.
 
 **Why Round-Robin works well here**:
-[Fairness, responsiveness, predictability?]
+A Round-Robin approach can give each ready task a turn instead of allowing one long task to use all the processing time. This can improve fairness between tasks. It is similar to my simulation, where unfinished processes return to the ready queue and wait for another turn.
 
 ## Summary
 
 **Key concepts I understood through these questions:**
-1.
-2.
-3.
+1.The difference between threads and processes.
+2.How Round-Robin scheduling uses the ready queue and time quantum.
+3.How Java threads are created, executed, and terminated.
 
 **Concepts I need to study more:**
-1.
-2.
+1.Thread synchronization.
+2.Different CPU scheduling algorithms
 
 ---
 
