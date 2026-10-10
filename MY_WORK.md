@@ -29,10 +29,10 @@
 
 | Field | Your Answer |
 |-------|-------------|
-| **Full Name** | [Write your full name here] |
-| **Student ID** | [Write your student ID here] |
-| **University Email** | [yourid]@std.psau.edu.sa |
-| **GitHub Username** | [your-github-username] |
+| **Full Name** | [Deem Omar Alroies] |
+| **Student ID** | [446051752] |
+| **University Email** | [446051752]@std.psau.edu.sa |
+| **GitHub Username** | [Deem277] |
 | **Repository Link** | [Paste your repository link here] |
  
 ---
@@ -129,68 +129,70 @@
 
 ## Your Development Log
 
-### Entry 1 - [Date and Time]
-**What I did**:
+### Entry 1 - [6/10 ]
+**What I did**: Set up my GitHub repository and personalized the project.
 
-**Details**:
+**Details**: I forked the starter repository, renamed it, cloned it into VS Code, and changed the student ID
 
-**Challenges**:
+**Challenges**: I had difficulty getting the Java program to show output in VS Code.
 
-**Solution**:
+**Solution**: I checked the Java configuration, tried different JDK settings, and reviewed the project setup.
 
-**Time spent**:
-
----
-
-### Entry 2 - [Date and Time]
-**What I did**:
-
-**Details**:
-
-**Challenges**:
-
-**Solution**:
-
-**Time spent**:
+**Time spent**: 30 minutes
 
 ---
 
-### Entry 3 - [Date and Time]
-**What I did**:
+### Entry 2 - [7/10]
+**What I did**: Added process priority.
 
-**Details**:
+**Details**: I added a priority variable to the Process class and generated a random priority between 1 and 10. I also displayed the priority when a process entered the ready queue.
 
-**Challenges**:
+**Challenges**: No major issues
 
 **Solution**:
 
-**Time spent**:
+**Time spent**: 30 minutes
 
 ---
 
-### Entry 4 - [Date and Time]
-**What I did**:
+### Entry 3 - [9/10]
+**What I did**: Added the context switch counter.
 
-**Details**:
+**Details**:  I added a static counter and increased it whenever a process started running. I displayed the total at the end of the simulation.
 
-**Challenges**:
 
-**Solution**:
+**Challenges**: I needed to find the correct place to increase the counter without changing how the scheduler works.
 
-**Time spent**:
+**Solution**: I added contextSwitchCount++ before currentThread.start(). Then I ran the program and checked that the total appeared at the end.
+
+**Time spent**: 1 hour
 
 ---
 
-### Entry 5 - [Date and Time]
-**What I did**:
+### Entry 4 - [10/10]
+**What I did**: Added the Waiting Time Tracking feature.
 
-**Details**:
 
-**Challenges**:
+**Details**: I used System.currentTimeMillis() to calculate waiting time. I added methods to start and stop waiting time tracking and displayed a final summary with burst time, waiting time, and turnaround time
 
-**Solution**:
+**Challenges**:  This feature was harder because I needed to add code in different parts of the program. I was also not sure where to add the processes to the allProcesses list.
 
-**Time spent**:
+**Solution**: I added each process to the list after creating it in the for loop. I also used startWaiting() and stopWaiting() to track waiting time. Then I used a simple for loop to display the final results.
+
+**Time spent**: 2 hour
+
+---
+
+### Entry 5 - [10/10]
+**What I did**: Reviewed the program and completed the documentation.
+
+**Details**: I tested the three features and reviewed the output. I worked on the reflection and technical questions in MY_WORK.md.
+
+**Challenges**: I needed to make sure the answers were related to my code and that I understood the changes I made.
+
+**Solution**: I reviewed the code and the program output while writing the answers. I also checked the README instructions to make sure I included the required information.
+
+**Time spent**: 30 minutes
 
 ---
 
@@ -211,13 +213,13 @@
 
 > 💡 **TIP:** Fill this in **last**, after all entries are written.
 
-**Total time spent on assignment**: [X hours]
+**Total time spent on assignment**: [120 hours]
 
-**Most challenging part**:
+**Most challenging part**: Adding the waiting time feature. The waiting time feature needed more changes than the other two features.
 
-**Most interesting learning**:
+**Most interesting learning**: I learned how Java threads work and how Round-Robin scheduling gives each process a turn to use the CPU. I also learned how to track waiting time and count context switches.
 
-**What I would do differently next time**:
+**What I would do differently next time**: Next time, I would test each change separately to find errors more easily.
 
 ---
 
